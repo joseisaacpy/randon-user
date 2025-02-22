@@ -42,3 +42,7 @@ async function pegarDados() {
 }
 // chama a funcao
 pegarDados();
+
+generateUserBtn.addEventListener("click", () => {
+  pegarDados();
+});
