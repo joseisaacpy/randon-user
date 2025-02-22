@@ -33,7 +33,7 @@ header {
   justify-content: center;
 
   width: 100%;
-  height: 80px;
+  height: 100px;
   text-align: center;
 
   background-color: #000;
@@ -43,6 +43,7 @@ header {
 main {
   animation: fade 1s ease-in-out;
 
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -53,31 +54,52 @@ main {
 }
 /* card */
 .card-user {
+  text-align: center;
   background: #fff;
   color: #000;
-  width: 40%;
+  width: 50%;
+  height: 60%;
   border-radius: 10px;
-  height: 90%;
   border: 1px solid #fff;
   padding: 10px;
 
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.5rem;
   flex-direction: column;
 }
 .card-user img {
-  width: 55%;
+  filter: drop-shadow(1px 1px 10px #000);
+  width: 30%;
   border-radius: 50%;
 }
 
 /* botao de gerar novo user */
-.card-user button {
-  padding: 10px;
-  width: 40%;
+.card-user button#generate-user {
+  width: 80%;
+  padding: 0.5rem;
   border-radius: 10px;
   outline: none;
   border: 0;
   background-color: orange;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* responsivo */
+@media screen and (max-width: 990px) {
+  html {
+    font-size: 20px;
+  }
+  .card-user {
+    width: 90%;
+    justify-content: space-around;
+  }
+  .card-user img {
+    width: 50%;
+  }
+  .card-user button#generate-user {
+    width: 90%;
+  }
 }
