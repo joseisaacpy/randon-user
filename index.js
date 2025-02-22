@@ -6,6 +6,8 @@ let userPhoto = document.getElementById("user-photo");
 let userName = document.getElementById("user-name");
 // email
 let userEmail = document.getElementById("user-email");
+// local
+let userLocation = document.getElementById("user-location");
 // botao de gerar novo user
 let generateUserBtn = document.getElementById("generate-user");
 
@@ -26,12 +28,13 @@ async function pegarDados() {
     console.log(result);
 
     // foto do usuario
-    userPhoto.getAttribute("src", result.picture.large);
+    userPhoto.src = result.picture.large;
     // nome do usuario recebe nome que está na API
-    userName.textContent = `${result.name.first} ${result.name.last}`;
+    userName.textContent = `👤 ${result.name.first} ${result.name.last}`;
     // email do usuario recebe nome que está na API
-    userEmail.textContent = result.email;
+    userEmail.textContent = "📩 " + result.email;
     // local do usuario recebe nome que está na API
+    userLocation.textContent = "🏙️ " + result.location.city;
   } catch (error) {
     // se der erro
     console.error(error);
