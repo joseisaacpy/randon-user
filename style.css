@@ -47,6 +47,13 @@ main {
   gap: 1rem;
   height: calc(100dvh - 80px);
 }
+/* botao de gerar novo user */
+main button {
+  padding: 5px;
+  border-radius: 10px;
+  outline: none;
+  border: 0;
+}
 /* card */
 .card-user {
   border: 1px solid #fff;
